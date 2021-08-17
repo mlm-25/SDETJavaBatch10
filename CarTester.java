@@ -12,6 +12,13 @@ public class CarTester {
 		car1.year=2020;
 		System.out.println("I have "+car1.make);
 		car1.moveBackwards();
+		
+		Car car2 = new Car();
+		car2.make="Tesla";
+		car2.model="S";
+		car2.color="White";
+		car2.year=2019;
+		car2.moveFoward();
 
 	}
 
