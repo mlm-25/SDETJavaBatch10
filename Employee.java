@@ -1,10 +1,18 @@
-package com.company.syntax.class17;
+package com.company.syntax.class20;
 
 public class Employee {
-
-    String empID;
+    String name;
+    int age;
+    double height;
+    double weight;
     double salary;
-    static String CEO = "Sumair";
+    String empId;
+    int experienceYears;
 
+
+
+    void eat(){
+        System.out.println("We can eat");
+    }
 
 }

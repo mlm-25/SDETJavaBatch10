@@ -1,6 +1,6 @@
 package com.company.syntax.class20;
 
-public class Tester extends Employee {
+public class Developer extends Employee{
     /*String name;
     int age;
     double height;
@@ -11,11 +11,10 @@ public class Tester extends Employee {
     String programmingLanguages;
 
 
-    void testCode(){
-        System.out.println("Testers can test applications");
+    void developApplications() {
+        System.out.println("Developers can develop applications");
     }
-
     /*void eat(){
         System.out.println("We can eat");
     }*/
-}
+    }
