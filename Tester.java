@@ -1,17 +1,20 @@
-package com.company.syntax.class24.overridingdemo;
+package com.company.syntax.class25.polymorphismdemo;
 
 public class Tester {
     public static void main(String[] args) {
-        Bank bank = new Bank(1500);
-        bank.chargeFee();
-        System.out.println(bank.fee);
 
-        BOA boa = new BOA(1500);
-        boa.chargeFee();
-        System.out.println(boa.fee);
+        WebDriver[] webDrivers = {new GoogleChrome(), new FireFox(), new Safari()};
+        for(WebDriver driver: webDrivers){
+            testOnAllBrowsers(driver);
+        }
 
-        Chase chase = new Chase(1500);
-        chase.chargeFee();
-        System.out.println(chase.fee);
+    }
+    static void testOnAllBrowsers(WebDriver webDriver){
+        webDriver.openBrowser();
+        webDriver.loadWebsite();
+        webDriver.Test1();
+        webDriver.Test2();
+        webDriver.TestFileDownload();
+        webDriver.closeBrowser();
     }
 }

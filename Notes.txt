@@ -1,45 +1,40 @@
-Method overloading in java:
-    Method overloading is when we have same name of a method inside a class
-    but with different type, number or sequence of parameters.
-    We overload methods to reuse code and write cleaner code.
+Method overriding:
+    Method is overriding is a mechanism in java through which child classes can provide
+    their own behaviors with same method can name in parent class.
 
-Class Overload{
+Rules for overriding:
+    1) There should be at least two classes with parent child relationship.
+    2) Method in child class must have same return type.
+    3) Name of method with parameters(signature of method) should be same
+    4) Those members of the class which do not participate in inheritance can
+    not be overridden  for example 1) Constructors 2) private methods
+    5) The access level of the method or property can not be more restrictive
+    for example if method in parent class has public access modifier we can not change
+    it to protected or default or private, but we can not do the reverse.
+    6) We can't override a static method, but we can redeclare that method in the child
+    class it's just a different name the mechanism is same as non-static methods
+    7) It's also called dynamic polymorphism/late binding
+    8) We can use @Override to test our overriding method is correct or not.
 
-void hello(){
-}
-void hello(String name){
-//overloading by changing number of parameters
-}
-void hello(String [] names){
-//overloading with different type of parameters
-}
-void hello(String [] names, String name){
-//overloading by changing the number of parameters
-}
-void hello(String name, String [] names){
-//overloading by changing the sequence of parameters
-}
-}
-
-Method Overloading Rules:
-    1) To overload we must have at least two methods with same name inside a class
-    2) We cannot overload a method by just changing the return type
-    3) We cannot overload by just changing the access modifier
-    4) Static methods can also be overloaded
-    5) We can also overload the constructor of a class
-Var args:
-    Is a mechanism in java through which we can handle arrays and multi arguments of same data type
-    in a method parameter.
-    We can treat the var args same as an array inside the method
-
-void (String ... names){
-sout names[0];
-sout names.length;
-for(int i =0; i<names.length;i++){
-sout names[i];
-}
-}
-Interview question:
-Can you overload a main method?
-Yes, you can overload main method in Java. But the program doesn't execute the overloaded main method
-when you run your program, you have to call the overloaded main method from the actual main method.
+Overloading                     vs                  Overriding
+Method return type does not matter ================= Method return type matters
+Method signature should be different ================ Method signature should be same
+Access modifiers don't matter ======================= Access modifiers matter
+Inheritance is not needed =========================== Need inheritance relationship
+We can overload a constructor ======================= Constructors can private methods can't be overridden private method
+we can overload static method
+-----------------------------------------------------------------------------------------------
+We can store a child class object inside a parent class type variable,
+but we will only be able to call those methods which are present in parent class
+if we want to call the methods from child class we must first convert parent type
+variable to Child type by using below syntax
+ (Child type) parentVar will convert it to child type now we can call the specific methods
+ from child as well
+with the help of this casting we can create an array that can hold all the objects of
+all the child classes of parent and because of overriding all the methods have dame name
+now we can execute all the methods from all the child classes with the help of an array
+without writing all the code manually
+-----------------------------------------------------------------------------------------------
+Final:
+in java means something is complete and don't need modifications.
+if we use final keyword with a variable we can't change the value of that variable

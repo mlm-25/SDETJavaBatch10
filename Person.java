@@ -1,24 +1,42 @@
-package com.company.syntax.class23;
+package com.company.syntax.class25.overridingdemo;
 
 public class Person {
     String name;
-    int age;
-    double height;
-    double weight;
-    String address;
-    String phoneNumber;
-
-    public Person(String name, int age, double height, double weight, String address, String phoneNumber) {
+    public Person(String name) {
         this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
     }
 
-    void printInfo(){
-        System.out.println(name+age+height+weight+address+phoneNumber);
+    void eat(){
+        System.out.println("Person can eat");
+    }
+    void performDailActivities(){
+        System.out.println("Eat sleep repeat");
+    }
+}
+class Employee extends Person{
+    public Employee(String name) {
+        super(name);
     }
 
+    void performDailActivities(){
+        System.out.println("Office work all the day and emails at night");
+    }
+}
+class Student extends Person{
+    public Student(String name) {
+        super(name);
+    }
+
+    void performDailActivities(){
+        System.out.println("Attend classes at night");
+    }
+}
+class Teacher extends Person{
+    public Teacher(String name) {
+        super(name);
+    }
+
+    void performDailActivities(){
+        System.out.println("Teaching classes checking assignments");
+    }
 }

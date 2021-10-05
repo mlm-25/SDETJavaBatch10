@@ -1,26 +1,23 @@
-package com.company.syntax.class18;
+package com.company.syntax.class25.task;
 
 public class StudentTester {
-
     public static void main(String[] args) {
+        Student student = new SyntaxStudent("Mauricio");
+        student.study();
+        student.hw();
+        ((SyntaxStudent)student).attendClass();
+        ((SyntaxStudent)student).java();
 
-        String name = null;
-        double av = 0;
+        student = new CollegeStudent("Jose");
+        student.study();
+        student.hw();
+        ((CollegeStudent)student).attendClass();
+        ((CollegeStudent)student).subject();
 
-        Student student1 = new Student();
-        name=student1.getName("Mauricio");
-        av=student1.Average(88,95,89);
-        System.out.println(name+av);
-
-        Student student2 = new Student();
-        name = student2.getName("Victor");
-        av = student2.Average(78,83,93);
-        System.out.println(name+av);
-
-        Student student3 = new Student();
-        name = student3.getName("Danny");
-        av = student2.Average(87,82,91);
-        System.out.println(name+av);
-
+        student = new SchoolStudent("Miguel");
+        student.study();
+        student.hw();
+        ((SchoolStudent)student).attendClass();
+        ((SchoolStudent)student).math();
     }
 }
