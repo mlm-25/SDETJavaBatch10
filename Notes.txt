@@ -1,15 +1,4 @@
-Abstraction -
-it is the process of hiding the implemented details and focus on the
-functionality
+Encapsulation - it is a process of hiding the fields in a class
+via declaring them private and then provide the getter and
+setter function to access or read/write the fields.
 
-it helps us to divide the workflow in multiple chile classes, and also it
-helps us to reduce the complexity of the code
-
-rules for abstraction:
-to define the abstract class, we have to use abstract keyword
-we can have abstract classes with or without abstract methods
-we cannot create the object of abstract class, but we can create the object of
-its derived class
-we can have public private protected members in abstract class
-we cannot have a method as static and abstract in abstract class
-we cannot have a method as a private and abstract
