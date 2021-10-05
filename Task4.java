@@ -1,25 +1,25 @@
-package com.company.syntax.class28.task;
+package com.company.syntax.class30;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.TreeMap;
 
 public class Task4 {
-    /*
-    Create an arrayList of even numbers from 1 to 50. Remove any number that is divisible by 5 from that arrayList.
-     */
-    public static void main(String[] args) {
-        ArrayList<Integer> num = new ArrayList<>();
 
-        for (int i = 2; i <= 50; i+=2) {
-            num.add(i);
-        }
-        System.out.println(num);
-        Iterator<Integer> iterator = num.iterator();
-        while (iterator.hasNext()){
-            if(iterator.next()%5==0){
-                iterator.remove();
-            }
-        }
-        System.out.println(num);
+    public static void main(String[] args) {
+        TreeMap<Integer, String> building = new TreeMap<>();
+        building.put(1, "Facebook");
+        building.put(2, "Google");;
+        building.put(3, "Netflix");
+        building.put(4, "Amazon");
+        building.put(5, "Google");
+        building.put(6, "Apple");
+        building.put(7, "IMB");
+        building.put(1, "Apple");
+        System.out.println(building);
+        System.out.println(building.size());
+        building.replace(4, "Adobe");
+        System.out.println(building);
+        building.remove(7);
+        System.out.println(building);
+
     }
 }

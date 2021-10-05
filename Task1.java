@@ -1,33 +1,24 @@
-package com.company.syntax.class29.hw;
+package com.company.syntax.class30;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.HashMap;
 
 public class Task1 {
-    /*
-    Create a Set collection in which you need to add names of the countries.
-    In this set we want all objects to be sorted in alphabetical order.
-    Using 2 different ways retrieve all elements from set.
-     */
 
     public static void main(String[] args) {
-        TreeSet<String> a = new TreeSet<>();
-        a.add("Portugal");
-        a.add("Brazil");
-        a.add("Uruguay");
-        a.add("France");
-        a.add("Germany");
-        a.add("Italy");
-        a.add("Spain");
-        a.add("United States");
-
-        System.out.println(a);
-        System.out.println("----------------------------");
-        for (String country:a
-             ) {
-            System.out.println(country);
-        }
-
+        HashMap<String, Integer> fruits = new HashMap<>();
+        fruits.put("Kiwi", 10);
+        fruits.put("Melon", 5);
+        fruits.put("Mango", 7);
+        fruits.put("Peach", 9);
+        fruits.put("Apple", 12);
+        fruits.put("Orange", 19);
+        System.out.println(fruits);
+        System.out.println(fruits.get("Peach"));
+        System.out.println(fruits.containsKey("Mango"));
+        System.out.println(fruits.containsValue(29));
+        fruits.remove("Orange");
+        System.out.println(fruits);
+        fruits.replace("Peach", 1);
+        System.out.println(fruits);
     }
 }

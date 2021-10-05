@@ -1,34 +1,27 @@
-package com.company.syntax.class29.hw;
+package com.company.syntax.class30;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Task2 {
-    /*
-    Create a Set of cities in which you want to make sure that insertion order is maintained.
-    Then remove any city that starts with “A”
-     */
 
     public static void main(String[] args) {
-        LinkedHashSet<String> a = new LinkedHashSet<>();
-        a.add("Atlanta");
-        a.add("Miami");
-        a.add("Amarillo");
-        a.add("Orlando");
-        a.add("Austin");
-        a.add("Houston");
-        a.add("Dallas");
+        Map<Integer, String> student = new HashMap<>();
+        student.put(1, "Maria");
+        student.put(2, "Jamil");
+        student.put(3, "Sharif");
+        student.put(4, "Ana");
+        student.put(5, "Olena");
 
-        System.out.println(a);
-        System.out.println("-------------------");
-        Iterator<String> iterator = a.iterator();
-        while(iterator.hasNext()){
-            String c = iterator.next();
-            if(c.startsWith("a") || c.startsWith("A")){
-             iterator.remove();
-            }
+        Collection<String> values = student.values();
+        for(String students : values){
+            System.out.println(students);
         }
-        System.out.println(a);
+        Set<Integer> keys = student.keySet();
+        for(Integer key : keys){
+            System.out.println(key);
+        }
     }
 }
