@@ -1,17 +1,26 @@
-package com.company.syntax.class29.hw;
+package com.company.syntax.reviewclass07;
 
 public class Student {
-    /*
-    Create a Set collection that will hold Objects of Student Type.
-    In this set we do not care about the insertion order.
-    Each student object should have name and studentID. Display name of each student.
-     */
-           public String name;
-           public int studentID;
 
-            public Student(String name, int studentID) {
-                this.name = name;
-                this.studentID = studentID;
-            }
+    String name;
+    String course;
+    static String salary;
+    static int level = 4;
+
+    void session(){
+        int lectures = 5;
+        for(int i = 0; i < lectures; i++){
+            System.out.println("you can attend the session");
+        }
     }
 
+    int studentFee(){
+        int fee = 1000;
+        int tax = 240;
+        return fee+tax+20;
+    }
+
+    void displayTheFees(){
+        System.out.println(name+" will pay the overall fees of "+studentFee());
+    }
+}

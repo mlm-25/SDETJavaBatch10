@@ -1,12 +1,14 @@
-package com.company.syntax.class27.task;
+package com.company.syntax.reviewclass07;
 
 public class Tester {
-
     public static void main(String[] args) {
-        WebDriver webDriver = new FirefoxDriver();
-        webDriver.openBrowser();
-        webDriver.maximizeWindow();
-        webDriver.findElement();
-        webDriver.closeBrowser();
+        InstanceVariable instanceVariable =  new InstanceVariable();
+        instanceVariable.name="instance";
+        instanceVariable.course="Java";
+
+        InstanceVariable instanceVariable2 = new InstanceVariable();
+        instanceVariable2.name="another instance";
+        instanceVariable2.course="selenium";
+
     }
 }

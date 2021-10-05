@@ -1,23 +1,22 @@
-package com.company.syntax.class25.task;
+package com.company.syntax.reviewclass07;
 
 public class StudentTester {
+
     public static void main(String[] args) {
-        Student student = new SyntaxStudent("Mauricio");
-        student.study();
-        student.hw();
-        ((SyntaxStudent)student).attendClass();
-        ((SyntaxStudent)student).java();
+        Student s1 = new Student();
+        s1.name = "Sharif";
+        s1.course = "Java";
+        s1.displayTheFees();
+        System.out.println(Student.salary);
 
-        student = new CollegeStudent("Jose");
-        student.study();
-        student.hw();
-        ((CollegeStudent)student).attendClass();
-        ((CollegeStudent)student).subject();
+        Student s2 = new Student();
+        s2.name = "Andrei";
+        s2.course = "Selenium";
+        s2.displayTheFees();
 
-        student = new SchoolStudent("Miguel");
-        student.study();
-        student.hw();
-        ((SchoolStudent)student).attendClass();
-        ((SchoolStudent)student).math();
+        Student s3 = new Student();
+        s3.name = "Enes";
+        s3.course = "API";
+        s3.displayTheFees();
     }
 }
