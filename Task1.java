@@ -1,31 +1,22 @@
-package com.company.syntax.class32;
+package com.company.syntax.class33.task;
 
-import java.util.TreeMap;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Task1 {
-    /*
-    Create a map of a building. Store floor number and it is associated company name.
-     (Example: 1= Google, 2=Syntax etc..). Insert 7 entries with duplicate keys and values.
-    Check how many entries you have?
-    Update company on a 4th floor
-    Remove company on the 7th floor
-    Print your map
-     */
 
-    public static void main(String[] args) {
-        TreeMap<Integer, String> building = new TreeMap<>();
-        building.put(1, "Google");
-        building.put(2, "Apple");
-        building.put(3, "Microsoft");
-        building.put(4, "IMB");
-        building.put(5, "Syntax");
-        System.out.println(building);
-        building.put(5, "Amazon");
-        System.out.println(building);
-        System.out.println(building.get(2));
-        System.out.println(building.size());
-        building.replace(5, "Tesla");
-        building.remove(5);
-        System.out.println(building);
+    public static void main(String[] args) throws IOException {
+        String path = System.getProperty("user.dir")+"\\Files\\Task1.properties";
+        FileInputStream fileInputStream = new FileInputStream(path);
+        Properties properties = new Properties();
+        properties.load(fileInputStream);
+        System.out.println(properties.get("browser"));
+        System.out.println(properties.get("url"));
+        System.out.println(properties.get("username"));
+        System.out.println(properties.get("password"));
+        fileInputStream.close();
+
     }
 }
