@@ -1,23 +1,4 @@
-Map -
-
-Map is an interface that helps us to store the data in the form of key value pairs.
-
-
-Map is a Data structure(it is a way to store and manipulate the data) that stores keys and
-values in the form of pair.
-
-keys and values must be objects
-keys cannot be duplicate
-values can be duplicate
-
-When to use Map:
-
-when fast search is required because of underlying data structure
-when we want the indexes other than natural indexes like integers
-
-Types of Maps:
-HashMap - oder is not maintained. but it is fasted. It is not thread safe.
-LinkedHasMap - oder is maintained bt it is slower than hashmap.
-TreeMap - it always stores the data in a stored from that's why it is slower
-HashTable - it is similar to the hashmap it should be used when we have to write the code of multithreading because
-it is thread safe, but it is slower than hashmap
+To read a file manually
+1) Locate the file
+2) Right type of software to manipulate that file
+3)

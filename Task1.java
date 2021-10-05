@@ -1,4 +1,4 @@
-package com.company.syntax.class31;
+package com.company.syntax.class32;
 
 import java.util.TreeMap;
 
@@ -14,19 +14,18 @@ public class Task1 {
 
     public static void main(String[] args) {
         TreeMap<Integer, String> building = new TreeMap<>();
-        building.put(1, "Facebook");
-        building.put(2, "Google");;
-        building.put(3, "Netflix");
-        building.put(4, "Amazon");
-        building.put(5, "Google");
-        building.put(6, "Apple");
-        building.put(7, "IMB");
-        building.put(1, "Apple");
+        building.put(1, "Google");
+        building.put(2, "Apple");
+        building.put(3, "Microsoft");
+        building.put(4, "IMB");
+        building.put(5, "Syntax");
         System.out.println(building);
+        building.put(5, "Amazon");
+        System.out.println(building);
+        System.out.println(building.get(2));
         System.out.println(building.size());
-        building.replace(4, "Adobe");
-        System.out.println(building);
-        building.remove(7);
+        building.replace(5, "Tesla");
+        building.remove(5);
         System.out.println(building);
     }
 }

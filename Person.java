@@ -1,19 +1,23 @@
-package com.company.syntax.class31;
+package com.company.syntax.class32.excelFile;
 
 public class Person {
-    String name;
-    String lastName;
-    int age;
-    double salary;
 
-    public Person(String name, String lastName, int age, double salary) {
-        this.name = name;
+    String firstName;
+    String lastName;
+    String age;
+
+    public Person(String firstName, String lastName, String age) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.salary = salary;
     }
 
-    public void personId(String name, String lastName){
-        System.out.println(this.name+" "+this.lastName);
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age='" + age + '\'' +
+                '}';
     }
 }
