@@ -1,28 +1,53 @@
-Instance Variables:
-    variables which are declared outside a method, loop, constructor or
-    a block of code but inside a class without static keyword are called instance variables.
-    we call them instance variables because for each object of that class a new copy of the variables
-    is created in memory.
-When to Use:
-    when a value is expected to change form object to object we should declare an instance variable for
-    those values.
-Static Variables:
-    instance variables with static keyword are called static variables. They are called class level variables
-    because their value stays the same across all objects and only one memory location is created from the main
-    memory.
-When to Use:
-    when a value is expected to stay the same, when we have to share something
-    across all the objects - we should store this info in a static variable.
-    Mostly it's used as constance.
-    As a good practice we should access it using the class names.
-
-Local variables:
-    variables which are declared inside a method or loop or switch case or any block of
-    code are called local variables.
+Types of Variables in Java:
+there are three types of variables in Java
+    1) local variables
+    2) instance
+    3) static
+1) Local variables:
+Are those variables which are declared inside a block if code(method, loop, constructor , switch, ect.)
+When to use:
+    Always why because they occupy the memory for the shortest period of tim in all the variables.
     we cannot use static keyword with local variables.
-    Local variables occupy the memory in computer for the shortest period of
-    time.
 
-Static Methods:
-    We can have static methods as well but static methods can not access instance variables
-    while non-static methods can access static as well as not static or instance variables.
+2) Instance variables:
+    Those variables which are outside of block but inside a class without static
+    keywords are called instance variables
+When to use:
+    when we know that from object to object we will be having different values, and we might
+    also need to share the variables between different instance methods of that class
+
+3) Static variables:
+    Those instance variables that have static keyword with them are called static variables.
+    One single copy of variables is shared across all the objects.
+When to use:
+    When we need to share something with all the objects.
+    They are mostly used as constants. We can also have instance and static methods, but we cannot use
+    instance variables or methods directly inside static method if we want to use them we must create an object of that
+    class but for the instance methods we can freely use both types of methods and variables.
+
+Java CLass 17
+-----------------------------------------------------------------
+Access modifiers are id done in java with the help of three keywords
+1) private
+2) protected
+3) public
+4) default (is not actually a keyword if we don't use any
+keyword with fields/methods default access is given to that field/method)
+
+1) Private:
+    private is the most restricted one we can only access private fields or methods if we
+    inside the same class.
+2)  Default access modifier:
+    This is not a keyword if we don't specify any keyword our fields or methods
+    default access is applicable to that member automatically
+    when default access is given to something that member is only accessible within the same class and same package
+3) Public:
+    public is least restricted one if a member is public we can access that member inside that class outside
+    that class and outside of package as well
+4) Protected:
+    It's a keyword, and it works a little different from other access modifiers.
+    If we are using a protected keyword we can access that member inside the same class  or same package with/without
+    creating an object depends on if we are in a static method or the instance method
+    but if we are in a different package we cannot access it by creating an object, but we can access it directly inside
+    the instance method of that class but for that we have to write extends keyword and name the class which that
+    variable/method is present, and then we can access it directly.
