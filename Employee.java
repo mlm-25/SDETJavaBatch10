@@ -1,13 +1,19 @@
-package com.company.syntax.class21;
+package com.company.syntax.class22;
 
 public class Employee extends Person{
-
-    String empId;
-    double salary;
-    void work(){
-        System.out.println("Employee "+empId+" having age "+age+" is working");
+    Employee(String name, int age, double height, double weight){
+        super(name, age, height, weight); // must be the first line
+        //can only use it once
     }
-    void getPaid(){
-        System.out.println(empId+" is paid "+salary);
+
+
+    public static void main(String[] args) {
+        Employee employee = new Employee("Oxana", 16, 5.5, 35);
+        employee.eat();
+        employee.sleep();
+        System.out.println(employee.name);
+        System.out.println(employee.age);
+        System.out.println(employee.height);
+        System.out.println(employee.weight);
     }
 }

@@ -1,22 +1,23 @@
-package com.company.syntax.class21;
+package com.company.syntax.class22;
 
 public class Person {
-
-    private String name;
+    String name;
     int age;
-    protected double height;
-    public double weight;
+    double height;
+    double weight;
 
-    public void sleep(){
-        System.out.println("Person is sleeping");
+    Person(String name, int age, double height, double weight) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
     }
-    protected void eat(){
-        System.out.println("Person is eating");
+
+    public void eat() {
+        System.out.println(name + " can eat");
     }
-    private void walk(){
-        System.out.println("Person can walk");
-    }
-    public static void run(){
-        System.out.println("Person can run");
+
+    public void sleep() {
+        System.out.println(name + " sleeps all the time");
     }
 }
