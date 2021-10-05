@@ -1,41 +1,55 @@
-package com.company.syntax.class27.encapsilation;
+package com.company.syntax.class28;
 
 public class Person {
     private String name;
     private int age;
-    private int weight;
-    private int height;
+    private String SSN;
 
-    public void setName(String name){
-        if(name.length()<15){
+    void setName(String name){
+        if(name.length()<20){
             this.name = name;
         }else{
-            System.out.println("Not allowed");
+            System.out.println("Name can not be greater than 20 characters");
         }
     }
-    public void setAge(int age){
-        if(age>0 && age<120){
+
+    void setAge(int age){
+        if(age>0 && age <120){
             this.age = age;
         }else{
-            System.out.println("Age out of range");
+            System.out.println("Age can't be less than 0 or greater than 120");
         }
     }
-    public  void setWeight(int weight){
-        if(weight>0 && weight<150){
-            this.weight = weight;
+
+    void setSSN(String SSN){
+        if(SSN.length()>0 && SSN.length()<=9){
+            this.SSN = SSN;
         }else{
-            System.out.println("Weight is out of range");
+            System.out.println("Wrong SSN");
         }
     }
+
     String getName(){
         return name;
     }
-    void printInfo(){
-        if(age == 0){
-            System.out.println("Something is wrong");
+
+
+    int getAge(String SSN){
+        if(this.SSN.equals(SSN)){
+            return age;
         }else{
-            System.out.println("Name "+name+" Age "+age+" Weight "+weight
-                    +" Height "+height);
+            return 0;
         }
     }
+
+
+
+    String getSSN(String password){
+        if(password.equals("12345")){
+            return this.SSN;
+        }else {
+            return null;
+        }
+    }
+
 }

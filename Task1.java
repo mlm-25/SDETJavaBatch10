@@ -1,17 +1,30 @@
-package com.company.syntax.class18;
+package com.company.syntax.class28;
+
+import java.util.Arrays;
 
 public class Task1 {
-    //Create a method that will accept an array as parameters
-    // and will return a sum of all elements from that array.
-    //Method should be visibly only within same package and
-    // accessible by the creating an instance of the class.
-    double sumArray(double [] array){
-        double sum=0;
-        for (double element:array){
-            sum+=element;
-        }
+    public static void main(String[] args) {
 
-        return sum;
+        int[] arr = {10, 20, 10, 70, 10};
+        int number=10;
+        System.out.println(Arrays.toString(remove(arr, number)));
+
     }
-
+    public static int[] remove(int[] arr, int number){
+        int counter=0;
+        for (int k : arr) {
+            if (k == number) {
+                counter++;
+            }
+        }
+        int[] newArr = new int[arr.length-counter];
+        int counter2=0;
+        for (int j : arr) {
+            if (j != number) {
+                newArr[counter2] = j;
+                counter2++;
+            }
+        }
+        return newArr;
+    }
 }

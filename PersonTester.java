@@ -1,22 +1,16 @@
-package com.company.syntax.class27.encapsilation;
+package com.company.syntax.class28;
 
 public class PersonTester {
+
     public static void main(String[] args) {
         Person person = new Person();
-        person.setName("Burju");
-        person.setAge(18);
-        person.setWeight(80);
-       /* person.name="Burju";
-        person.age=16;
-        person.weight=30;
-        person.height=5;*/
-        person.printInfo();
+        person.setName("Sule");
+        person.setAge(16);
+        person.setSSN("123456789");
+        System.out.println(person.getName());
+        System.out.println(person.getAge("123456789"));
+    /*Person person1 = null;
+    person1.setAge(12);*/
 
-        Person person1 = new Person();
-        /*person1.name="Mick King";
-        person1.age=120;
-        person1.height=2000;
-        person1.weight=-15;*/
-        person1.printInfo();
     }
 }
