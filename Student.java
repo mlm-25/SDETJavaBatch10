@@ -1,19 +1,22 @@
-package com.syntax.class13;
+package com.syntax.reviewclass06;
 
 public class Student {
-
+	
 	String name;
+	int age;
 	String id;
+	String school;
 	char gender;
 	double tuition;
-	String school;
-
+	
+	
 	void study() {
-		System.out.println(name + " studies in " + school);
+		System.out.println(name+" studies in "+school);
 	}
-
+	
 	void payTuition() {
-		System.out.println(name + " pay " + tuition);
+		System.out.println(name+" pay "+tuition);
 	}
+	
 
 }

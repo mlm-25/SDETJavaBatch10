@@ -1,25 +1,29 @@
-package com.syntax.class13;
+package com.syntax.reviewclass06;
 
 public class StudentTester {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Student Michael = new Student();
-		Michael.name = "Michael";
-		Michael.id = "123";
-		Michael.gender = 'M';
-		Michael.school = "Syntax";
-		Michael.tuition = 1000;
-		Michael.study();
-		Michael.payTuition();
-
-		Student Anne = new Student();
-		Anne.name = "Anne Mary";
-		Anne.school = "Syntax";
-		Anne.tuition = 1000;
-		Anne.study();
-		Anne.payTuition();
-
+		
+		Student bilal = new Student();
+		bilal.name="Ahamad";
+		bilal.id="99";
+		bilal.gender='M';
+		bilal.school="Syntax";
+		bilal.tuition=15000;
+		bilal.study();
+		bilal.payTuition();
+		
+		Student serge = new Student();
+		serge.name="Casisan";
+		serge.id="98";
+		serge.gender='M';
+		serge.school="Syntax";
+		serge.tuition=10000;
+		serge.study();
+		serge.payTuition();
+		
+		
+		
 	}
+
 }

@@ -1,19 +1,17 @@
-package com.syntax.class13;
+package com.syntax.reviewclass06;
 
 public class PhoneTester {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 		Phone iphone = new Phone();
 		iphone.camera = 12;
-		iphone.make = "Apple";
-		iphone.model = "iPhone 12";
+		iphone.maker = "Apple";
+		iphone.model = "iPhone 13";
 		iphone.is5G = true;
-		iphone.screenSize = 6.7;
+		iphone.screenSize = 5.5;
 		iphone.makeCall();
 		iphone.takePictures();
-
 	}
 
 }

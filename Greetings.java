@@ -1,21 +1,17 @@
-package com.syntax.class13;
+package com.syntax.reviewclass06;
 
 public class Greetings {
 
-	void sayHello() {
-		System.out.println("Hello Batch 10");
-		System.out.println("Hello Batch 10");
-		System.out.println("Hello Batch 10");
-	}
+	void sayHelloBatch10() {
+		System.out.println("Hello Geniuses");
+		System.out.println("Hello Geniuses");
+		System.out.println("Hello Geniuses");
 
-	void printNumber(int number) {
-
-		System.out.println(number);
 	}
-
-	void sayHelloManyTimes(int number) {
-		for (int i = 0; i < number; i++) {
-			System.out.println("Hello Batch 10");
-		}
+	
+	void printAge(int age) {
+		System.out.println("The age of current student is "+age);
 	}
+	
+	
 }
