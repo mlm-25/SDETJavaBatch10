@@ -1,14 +1,36 @@
-package com.company.syntax.class23;
+package com.company.syntax.class24.overridingdemo;
 
-public class Employee extends Person{
+public class Employee {
+    double salary;
     String name;
-    int age;
-    double height;
-    double weight;
-    String address;
-    String phoneNumber;
+    Employee(String name, double salary){
+        this.salary=salary;
+        this.name=name;
+    }
+    void getPaid(){
+        System.out.println(name+" is getting paid "+salary+"/anum");
+    }
+}
+class Contractor extends Employee{
 
-    public Employee(String name, int age, double height, double weight, String address, String phoneNumber) {
-        super(name, age, height, weight, address, phoneNumber);
+    Contractor(String name, double salary){
+        super(name, salary);
+    }
+    @Override
+    void getPaid(){
+        System.out.println(name+" is getting paid "+salary+"/hourly");
+    }
+}
+class FullTimeEmployee extends Employee{
+
+    FullTimeEmployee(String name, double salary) {
+        super(name, salary);
+    }
+
+    public static void main(String[] args) {
+        FullTimeEmployee fullTimeEmployee = new FullTimeEmployee("Mauricio", 100000);
+        fullTimeEmployee.getPaid();
+        Contractor contractor = new Contractor("Mike", 45);
+        contractor.getPaid();
     }
 }

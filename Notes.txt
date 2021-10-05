@@ -1,7 +1,45 @@
-"Super" keyword:
-Super keyword is only applicable when we have at least two classes that have
-parent child relationship if we have duplicate field/ method in parent and child class
-we can use super keyword to refer to the parent class and if we do not use super keyword
-field/method from child class will be referred.
-we can also use super keyword with parentheses to call the parent class constructor so that
-we do not repeat that code in all the child classes.
+Method overloading in java:
+    Method overloading is when we have same name of a method inside a class
+    but with different type, number or sequence of parameters.
+    We overload methods to reuse code and write cleaner code.
+
+Class Overload{
+
+void hello(){
+}
+void hello(String name){
+//overloading by changing number of parameters
+}
+void hello(String [] names){
+//overloading with different type of parameters
+}
+void hello(String [] names, String name){
+//overloading by changing the number of parameters
+}
+void hello(String name, String [] names){
+//overloading by changing the sequence of parameters
+}
+}
+
+Method Overloading Rules:
+    1) To overload we must have at least two methods with same name inside a class
+    2) We cannot overload a method by just changing the return type
+    3) We cannot overload by just changing the access modifier
+    4) Static methods can also be overloaded
+    5) We can also overload the constructor of a class
+Var args:
+    Is a mechanism in java through which we can handle arrays and multi arguments of same data type
+    in a method parameter.
+    We can treat the var args same as an array inside the method
+
+void (String ... names){
+sout names[0];
+sout names.length;
+for(int i =0; i<names.length;i++){
+sout names[i];
+}
+}
+Interview question:
+Can you overload a main method?
+Yes, you can overload main method in Java. But the program doesn't execute the overloaded main method
+when you run your program, you have to call the overloaded main method from the actual main method.

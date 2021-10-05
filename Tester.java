@@ -1,21 +1,17 @@
-package com.company.syntax.class20;
+package com.company.syntax.class24.overridingdemo;
 
-public class Tester extends Employee {
-    /*String name;
-    int age;
-    double height;
-    double weight;
-    double salary;
-    String empId;
-    int experienceYears;*/
-    String programmingLanguages;
+public class Tester {
+    public static void main(String[] args) {
+        Bank bank = new Bank(1500);
+        bank.chargeFee();
+        System.out.println(bank.fee);
 
+        BOA boa = new BOA(1500);
+        boa.chargeFee();
+        System.out.println(boa.fee);
 
-    void testCode(){
-        System.out.println("Testers can test applications");
+        Chase chase = new Chase(1500);
+        chase.chargeFee();
+        System.out.println(chase.fee);
     }
-
-    /*void eat(){
-        System.out.println("We can eat");
-    }*/
 }
