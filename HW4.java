@@ -1,30 +1,20 @@
-package com.syntax.class13;
+package com.syntax.class14;
 
 public class HW4 {
 
-	String greeting(String country) {
+	public static void main(String[] args) {
 
-		String hello = null;
-		switch (country) {
+		String name = "Sunday";
 
-		case "USA":
-			hello = "Hello";
-			break;
-		case "Spain":
-			hello = "Hola";
-			break;
-		case "Italy":
-			hello = "Ciao";
-			break;
-		case "Brazil":
-			hello = "Ola";
-			break;
-		default:
-			hello = "Invalid Country";
-			break;
+		String reversed = "";
+
+		for (int i = name.length() - 1; i >= 0; i--) {
+			
+			reversed+=name.charAt(i);
 
 		}
-		return hello;
+		
+		System.out.println(reversed);
 
 	}
 
