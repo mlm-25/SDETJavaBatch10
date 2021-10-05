@@ -1,26 +1,30 @@
-package com.company.syntax.class23.part1;
+package com.company.syntax.groupproject;
 
-public class Shape {
-    /*
-    Write program: Shape class has a constructor that takes the radius and has a subclass as  circle class.
-    In circle class create a method to calculate the area of circle. Test your code.
-     */
-    double rad;
-    Shape(double radius){
-        this.rad = radius;
+public interface Shape {
+    void calculateArea (int radius);
+    void calculatePerimiter(int radius);
+}
+class Circle implements Shape{
+
+    @Override
+    public void calculateArea(int radius) {
+        System.out.println(Math.PI*radius*radius);
+    }
+
+    @Override
+    public void calculatePerimiter(int radius) {
+        System.out.println(2* Math.PI*radius);
     }
 }
-class Circle extends Shape{
-    double cal;
-    Circle(double radius){
-        super(radius);
-    }
-    void calculate(){
-        System.out.println(cal=Math.PI*(Math.pow(super.rad,2)));
+class Square implements Shape{
+
+    @Override
+    public void calculateArea(int area) {
+        System.out.println(area*area);
     }
 
-    public static void main(String[] args) {
-        Circle c = new Circle(10);
-        c.calculate();
+    @Override
+    public void calculatePerimiter(int area) {
+        System.out.println(area*4);
     }
 }

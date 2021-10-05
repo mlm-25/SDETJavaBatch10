@@ -1,10 +1,14 @@
-package com.company.syntax.class18;
+package com.company.syntax.groupproject;
 
 public class Task1Tester {
 
     public static void main(String[] args) {
-        double[] array={10,20,30,40};
-        Task1 task1 = new Task1();
-        System.out.println(task1.sumArray(array));
+        Circle circle=new Circle();
+        circle.calculateArea(2);
+        circle.calculatePerimiter(2);
+
+        Square square=new Square();
+        square.calculateArea(3);
+        square.calculatePerimiter(5);
     }
 }
