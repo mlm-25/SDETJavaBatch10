@@ -1,34 +1,7 @@
-"this" keyword:
-We can use this keyword to differentiate between local and instance variables.
-class car{
-String make;
-String model;
-int year;
-Car(String make, String model, int year){
-this.make=make;
-this.model=model;
-this.year=year;
-}
-
-void int year=2021;
-String make ="Honda";
-String model="Civic";
-System.out.println;
-}
-"this()"
-we can use this() to refer to the contractors of the class
-if we have multiple constructors Java will decide based on the parameters
-to call
-this keyword to call the methods
-------------------------------------------------------------
-Inheritance:
-is a mechanism in Java through which we can access all the fields and methods from one class
-inside another class
-We use extends key word to inherit the properties and methods.
-benefits:
-we can ovoid code duplication
-it improves performance
-it reduces amount of memory to run the program
-Disadvantages:
-Parent child classes are tightly coupled if we make any changes we must update the child class
-as well otherwise code may break.
+"Super" keyword:
+Super keyword is only applicable when we have at least two classes that have
+parent child relationship if we have duplicate field/ method in parent and child class
+we can use super keyword to refer to the parent class and if we do not use super keyword
+field/method from child class will be referred.
+we can also use super keyword with parentheses to call the parent class constructor so that
+we do not repeat that code in all the child classes.

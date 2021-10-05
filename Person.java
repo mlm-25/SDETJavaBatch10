@@ -1,23 +1,24 @@
-package com.company.syntax.class22;
+package com.company.syntax.class23;
 
 public class Person {
     String name;
     int age;
     double height;
     double weight;
+    String address;
+    String phoneNumber;
 
-    Person(String name, int age, double height, double weight) {
+    public Person(String name, int age, double height, double weight, String address, String phoneNumber) {
         this.name = name;
         this.age = age;
         this.height = height;
         this.weight = weight;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
     }
 
-    public void eat() {
-        System.out.println(name + " can eat");
+    void printInfo(){
+        System.out.println(name+age+height+weight+address+phoneNumber);
     }
 
-    public void sleep() {
-        System.out.println(name + " sleeps all the time");
-    }
 }

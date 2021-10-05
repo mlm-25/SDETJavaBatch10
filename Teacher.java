@@ -1,19 +1,7 @@
-package com.company.syntax.class20;
+package com.company.syntax.class23;
 
-public class Teacher {
-
-    String name;
-    int experience;
-    String subject;
-    double salary;
-
-    void printInfo(String teacherName, String teacherSubject, int teacherExperience, double teacherSalary){
-        this.name=teacherName;
-        this.subject=teacherSubject;
-        this.experience=teacherExperience;
-        this.salary=teacherSalary;
-        System.out.println(this.name+" teaches "+this.subject+" they have "+this.experience+" years of experience"+
-                " and they make $"+this.salary);
+public class Teacher extends Person{
+    public Teacher(String name, int age, double height, double weight, String address, String phoneNumber) {
+        super(name, age, height, weight, address, phoneNumber);
     }
-
 }

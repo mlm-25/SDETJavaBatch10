@@ -1,19 +1,14 @@
-package com.company.syntax.class22;
+package com.company.syntax.class23;
 
 public class Employee extends Person{
-    Employee(String name, int age, double height, double weight){
-        super(name, age, height, weight); // must be the first line
-        //can only use it once
-    }
+    String name;
+    int age;
+    double height;
+    double weight;
+    String address;
+    String phoneNumber;
 
-
-    public static void main(String[] args) {
-        Employee employee = new Employee("Oxana", 16, 5.5, 35);
-        employee.eat();
-        employee.sleep();
-        System.out.println(employee.name);
-        System.out.println(employee.age);
-        System.out.println(employee.height);
-        System.out.println(employee.weight);
+    public Employee(String name, int age, double height, double weight, String address, String phoneNumber) {
+        super(name, age, height, weight, address, phoneNumber);
     }
 }
