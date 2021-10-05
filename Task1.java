@@ -1,13 +1,17 @@
-package com.company.syntax.class16;
+package com.company.syntax.class18;
 
 public class Task1 {
+    //Create a method that will accept an array as parameters
+    // and will return a sum of all elements from that array.
+    //Method should be visibly only within same package and
+    // accessible by the creating an instance of the class.
+    double sumArray(double [] array){
+        double sum=0;
+        for (double element:array){
+            sum+=element;
+        }
 
-    public static void main(String[] args) {
-        //Create a String that will hold a sentence. Write a program to get a new String without any spaces.
-
-        String str = "This is a sentence with spaces";
-        System.out.println(str);
-        System.out.println(str.replace(" ","")); // removes all spaces from sentence
-
+        return sum;
     }
+
 }

@@ -1,18 +1,20 @@
-package com.syntax.class12;
+package com.company.syntax.class18;
 
 public class Car {
-	
-	String make;
-	String model;
-	String color;
-	int year;
-	
-	void moveFoward() {
-		System.out.println(make+" "+model+" can move foward");
-	}
 
-	void moveBackwards() {
-		System.out.println(make+" "+model+" can move backwards");
-	}
-	
+    String model;
+    String make;
+    int year;
+    String color = "White";
+
+    Car(String carModel, String carMake, int carYear){
+        model = carModel;
+        make = carMake;
+        year = carYear;
+    }
+
+    void printCarInfo(){
+        System.out.println("Model "+model+" Make "+make+" Year "+year);
+    }
+
 }

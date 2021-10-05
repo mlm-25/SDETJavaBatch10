@@ -1,20 +1,19 @@
-package com.company.syntax.class16;
+package com.company.syntax.class18;
 
 public class DogTester {
 
     public static void main(String[] args) {
 
-        Dog dog1 = new Dog();
-        dog1.name="James";
-        dog1.color="gray";
-        Dog.Breed ="Husky";
+        Dog dog = new Dog("Tommy", 10,
+                12.5, 25, "BullDog", "White");
 
-        Dog dog2 = new Dog();
-        dog2.name="Bobby";
-        dog2.color="white";
-        System.out.println(Dog.Breed);
+        dog.printDogInfo();
 
+        Dog dog2 = new Dog("Boby");
+        dog2.printDogInfo();
 
-
+        Dog dog3 = new Dog("Jimmi", 20);
+        Dog dog4 = new Dog();
+        dog4.printDogInfo();
     }
 }

@@ -1,18 +1,13 @@
-package com.company.syntax.class16;
+package com.company.syntax.class18;
 
 public class Task2 {
+    // Create a method that will take a String
+    // as a parameter and returns reversed String.
+    // Method should be available to all classes within
+    // your project and accessible by class name
 
-    public static void main(String[] args) {
-        /*
-        Create a String that should be combination of letters, numbers and special characters.
-        Find out how many alpha characters are there in the String.
-         */
-        // To fromat the code use CTL+ALT+L
-
-        String str = "ajafaASDFR1234!@#$%^";
-        System.out.println(str.replaceAll("[^a-z A-Z 0-9]", ""));
-        System.out.println(str.replaceAll("[^a-z A-Z 0-9]", "").length());
-
+    public static String reverse (String inputStr){
+        return new StringBuilder(inputStr).reverse().toString();
 
     }
 }

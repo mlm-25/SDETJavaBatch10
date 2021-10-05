@@ -1,16 +1,13 @@
-package com.company.syntax.class16;
+package com.company.syntax.class18;
 
 public class Task3 {
 
+
+    private static String onlyVowels(String input){
+        return input.replaceAll("[^aeiouAEIOU]", "");
+    }
+
     public static void main(String[] args) {
-        /*
-         You have a String a=”Is it saturday? Is it raining? Do we have a Java Class today?”
-         How would you find out how many sentences are in that String?
-         */
-
-        String str = "Is it saturday? Is it raining? Do we have a Java Class today?";
-        String[] str2 = str.split("[?]");
-        System.out.println(str2.length);
-
+        System.out.println(onlyVowels("abcdefghijklmnopqrstuvwxyz"));
     }
 }
