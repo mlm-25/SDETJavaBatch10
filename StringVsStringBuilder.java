@@ -1,18 +1,29 @@
-package com.company.syntax.reviewclass07;
+package com.syntax.class15;
 
 public class StringVsStringBuilder {
 
-    public static void main(String[] args) {
-        String name = "Alex";
-        String designation = "Test lead";
-        String city = "Denver";
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str="ABCD";
+		System.out.println(str.concat("Z"));
+		System.out.println(str);
+		
+		StringBuilder str2 = new StringBuilder("ABCD");
+		
+		System.out.println(str2.append("Z"));
+		System.out.println(str2);
+		
+		StringBuilder str3 = new StringBuilder("Sunday");
+		System.out.println(str3.reverse());
+		
+		String name = "Ali";
+		StringBuilder str4 = new StringBuilder(name); // converting String into StringBuilder
+		System.out.println(str4);
+		
+		name=str4.toString(); //converting StringBuilder into String
+		System.out.println(name);
+		
+	}
 
-        String name2 = "Mike";
-        String designation2 = "Manager";
-        String city2 = "Miami";
-
-        StringBuilder name3 = new StringBuilder("James");
-        StringBuilder designation3 = new StringBuilder("DM");
-        StringBuilder city3 = new StringBuilder("NewYork");
-    }
 }
