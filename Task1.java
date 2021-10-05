@@ -1,30 +1,33 @@
-package com.company.syntax.class28;
+package com.company.syntax.class29.hw;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 public class Task1 {
+    /*
+    Create a Set collection in which you need to add names of the countries.
+    In this set we want all objects to be sorted in alphabetical order.
+    Using 2 different ways retrieve all elements from set.
+     */
+
     public static void main(String[] args) {
+        TreeSet<String> a = new TreeSet<>();
+        a.add("Portugal");
+        a.add("Brazil");
+        a.add("Uruguay");
+        a.add("France");
+        a.add("Germany");
+        a.add("Italy");
+        a.add("Spain");
+        a.add("United States");
 
-        int[] arr = {10, 20, 10, 70, 10};
-        int number=10;
-        System.out.println(Arrays.toString(remove(arr, number)));
+        System.out.println(a);
+        System.out.println("----------------------------");
+        for (String country:a
+             ) {
+            System.out.println(country);
+        }
 
-    }
-    public static int[] remove(int[] arr, int number){
-        int counter=0;
-        for (int k : arr) {
-            if (k == number) {
-                counter++;
-            }
-        }
-        int[] newArr = new int[arr.length-counter];
-        int counter2=0;
-        for (int j : arr) {
-            if (j != number) {
-                newArr[counter2] = j;
-                counter2++;
-            }
-        }
-        return newArr;
     }
 }

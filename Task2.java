@@ -1,35 +1,34 @@
-package com.company.syntax.class28;
+package com.company.syntax.class29.hw;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 
 public class Task2 {
     /*
-   1) Create an ArrayList that will store 5 names into it.
-   2) Find out whether the given ArrayList is empty or not?
-   3) Check whether the specific name is present in an ArrayList or not?
-   4) Find the size of your arrayList and print all values from that
+    Create a Set of cities in which you want to make sure that insertion order is maintained.
+    Then remove any city that starts with “A”
      */
 
     public static void main(String[] args) {
-        //Part 1
-        ArrayList<String> arr = new ArrayList<>();
-        arr.add("Luka");
-        arr.add("Karim");
-        arr.add("Eder");
-        arr.add("David");
-        arr.add("Toni");
+        LinkedHashSet<String> a = new LinkedHashSet<>();
+        a.add("Atlanta");
+        a.add("Miami");
+        a.add("Amarillo");
+        a.add("Orlando");
+        a.add("Austin");
+        a.add("Houston");
+        a.add("Dallas");
 
-        //Part 2
-        System.out.println(arr.isEmpty());
-
-        //Part 3
-        System.out.println(arr.contains("Toni"));
-
-        //Part 4
-        int size = arr.size();
-        System.out.println(arr);
-        System.out.println("Array length is "+size);
-
+        System.out.println(a);
+        System.out.println("-------------------");
+        Iterator<String> iterator = a.iterator();
+        while(iterator.hasNext()){
+            String c = iterator.next();
+            if(c.startsWith("a") || c.startsWith("A")){
+             iterator.remove();
+            }
+        }
+        System.out.println(a);
     }
 }

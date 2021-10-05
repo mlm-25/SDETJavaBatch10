@@ -1,22 +1,21 @@
-package com.company.syntax.class28;
+package com.company.syntax.class29;
 
 import java.util.ArrayList;
 
 public class ArrayListDemo3 {
-
     public static void main(String[] args) {
-        ArrayList<String> arraysList = new ArrayList<>();
-        arraysList.add("Hi");
-        arraysList.add("Eli");
-        arraysList.add("Jam");
-        arraysList.add("Eli");
-        arraysList.add("Tes");
-        arraysList.add("Eli");
-        System.out.println(arraysList);
-        arraysList.remove("Eli");
-        System.out.println(arraysList);
-        arraysList.add(2, "Serge");
-        System.out.println(arraysList);
-
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Night");
+        words.add("Day");
+        words.add("Sun");
+        words.add("Moon");
+        System.out.println(words.contains("Lion"));
+        System.out.println(words.contains("Moon"));
+       // words.clear();
+        System.out.println(words);
+        ArrayList<String> otherWords = new ArrayList<>();
+        otherWords.add("Sun");
+        otherWords.add("Moon");
+        System.out.println( words.containsAll(otherWords));
     }
 }
