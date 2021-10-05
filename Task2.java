@@ -1,27 +1,36 @@
-package com.company.syntax.class30;
+package com.company.syntax.class31;
 
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class Task2 {
 
-    public static void main(String[] args) {
-        Map<Integer, String> student = new HashMap<>();
-        student.put(1, "Maria");
-        student.put(2, "Jamil");
-        student.put(3, "Sharif");
-        student.put(4, "Ana");
-        student.put(5, "Olena");
+    /*
+    Create a map of countries with its capital that will store countries in alphabetical order.
+    Print all keys and values from a country map using for each loop and iterator.
+    Print all values from a country map using for each loop and iterator.
+     */
 
-        Collection<String> values = student.values();
-        for(String students : values){
-            System.out.println(students);
+    public static void main(String[] args) {
+        Map<String, String> caps = new TreeMap<>();
+        caps.put("United States", "Washington DC");
+        caps.put("El Salvador", "San Salvador");
+        caps.put("Argentina", "Buenos Aires");
+        caps.put("Chile", "Santiago");
+        caps.put("Spain", "Madrid");
+        caps.put("Italy", "Rome");
+
+        Set<Map.Entry<String, String>> c = caps.entrySet();
+
+        Iterator<Map.Entry<String, String>> a = c.iterator();
+
+        while(a.hasNext()){
+            Map.Entry<String, String> one = a.next();
+            System.out.println(one);
         }
-        Set<Integer> keys = student.keySet();
-        for(Integer key : keys){
-            System.out.println(key);
-        }
+
+
     }
 }

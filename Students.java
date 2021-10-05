@@ -1,37 +1,35 @@
-package com.company.syntax.class16;
+package com.company.syntax.class31;
+
+import com.company.syntax.class29.hw.Student;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Students {
 
-    String studentName;
-    String studentID;
-    int numberOfStudents;
-
     public static void main(String[] args) {
+        Set<Student> students = new LinkedHashSet<>();
+        students.add(new Student("Andrei", 101));
+        students.add(new Student("Olena", 102));
+        students.add(new Student("Serge", 103));
+        students.add(new Student("Michael", 104));
+        students.add(new Student("Mauricio", 105));
 
-        int numberOfStudents = 0;
+        System.out.println(students.size());
 
-        Students student1 = new Students();
-        student1.studentName = "Mauricio";
-        student1.studentID = "123";
-        numberOfStudents+=1;
-
-        Students student2 = new Students();
-        student2.studentName = "Michael";
-        student2.studentID = "456";
-        numberOfStudents+=1;
-
-        Students student3 = new Students();
-        student3.studentName = "Javier";
-        student3.studentID = "789";
-        System.out.println();
-        numberOfStudents += 1;
-
-        System.out.println(student1.studentName+" is a student and his ID is "+student1.studentID );
-        System.out.println(student2.studentName+" is a student and his ID is "+student2.studentID );
-        System.out.println(student3.studentName+" is a student and his ID is "+student3.studentID );
-        System.out.println("In total there are "+numberOfStudents+" students");
-
-
+        Iterator<Student> it = students.iterator();
+        while(it.hasNext()){
+            Student s = it.next();
+            String name = s.name;
+            int id = s.studentID;
+            System.out.println(name+" id is = "+id);
+        }
+        System.out.println("--------------------------------");
+        Iterator<Student> itr = students.iterator();
+        while(itr.hasNext()){
+            Student stu = itr.next();
+            System.out.println(stu.name+" id is = "+stu.studentID);
+        }
     }
-
 }

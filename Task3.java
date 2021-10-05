@@ -1,29 +1,31 @@
-package com.company.syntax.class30;
+package com.company.syntax.class31;
 
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class Task3 {
+    /*
+    Create a map of Best Buy store. Place
+    item id and item name into it.
+    Example (7664847 = Printer, 7879885= TV etc )
+    Retrieve all keys and values from a Best Buy map using EntrySet.
+     */
 
     public static void main(String[] args) {
-        Map<String, Double> items = new LinkedHashMap<>();
-        items.put("soap", 5.9);
-        items.put("towel", 5.1);
-        items.put("blanket", 2.1);
-        items.put("pillow", 3.0);
-        System.out.println(items.size());
+        Map<Integer, String> best = new HashMap<>();
+        best.put(1, "PS5");
+        best.put(2, "TV");
+        best.put(3, "Laptop");
+        best.put(4, "Fire Stick");
+        best.put(5, "Air Pods");
 
-        Set<String> keys = items.keySet();
+        Set<Map.Entry<Integer, String>> c = best.entrySet();
+        Iterator<Map.Entry<Integer, String>> a = c.iterator();
 
-        Iterator<String> iterator = keys.iterator();
-        while (iterator.hasNext()){
-            String item = iterator.next();
-            if(item.contains("o")){
-                iterator.remove();
-            }
+        while(a.hasNext()){
+            System.out.println(a.next());
         }
-        System.out.println(items);
     }
 }

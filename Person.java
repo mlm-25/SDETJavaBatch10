@@ -1,55 +1,19 @@
-package com.company.syntax.class28;
+package com.company.syntax.class31;
 
 public class Person {
-    private String name;
-    private int age;
-    private String SSN;
+    String name;
+    String lastName;
+    int age;
+    double salary;
 
-    void setName(String name){
-        if(name.length()<20){
-            this.name = name;
-        }else{
-            System.out.println("Name can not be greater than 20 characters");
-        }
+    public Person(String name, String lastName, int age, double salary) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
     }
 
-    void setAge(int age){
-        if(age>0 && age <120){
-            this.age = age;
-        }else{
-            System.out.println("Age can't be less than 0 or greater than 120");
-        }
+    public void personId(String name, String lastName){
+        System.out.println(this.name+" "+this.lastName);
     }
-
-    void setSSN(String SSN){
-        if(SSN.length()>0 && SSN.length()<=9){
-            this.SSN = SSN;
-        }else{
-            System.out.println("Wrong SSN");
-        }
-    }
-
-    String getName(){
-        return name;
-    }
-
-
-    int getAge(String SSN){
-        if(this.SSN.equals(SSN)){
-            return age;
-        }else{
-            return 0;
-        }
-    }
-
-
-
-    String getSSN(String password){
-        if(password.equals("12345")){
-            return this.SSN;
-        }else {
-            return null;
-        }
-    }
-
 }
