@@ -1,26 +1,43 @@
-package com.company.syntax.reviewclass07;
+package com.company.syntax.reviewclass10;
 
 public class Student {
-
     String name;
     String course;
-    static String salary;
-    static int level = 4;
 
-    void session(){
-        int lectures = 5;
-        for(int i = 0; i < lectures; i++){
-            System.out.println("you can attend the session");
-        }
+    Student(String name, String course){
+        this.name = name;
+        this.course = course;
     }
 
-    int studentFee(){
-        int fee = 1000;
-        int tax = 240;
-        return fee+tax+20;
+    void getCourseInfo(){
+        System.out.println(name + " is learning "+ course);
+    }
+}
+class Selenium extends Student{
+    Selenium(String name, String course){
+        super(name, course);
     }
 
-    void displayTheFees(){
-        System.out.println(name+" will pay the overall fees of "+studentFee());
+    void getCourseInfo(){
+        System.out.println(name + " is learning the course of "+course);
+    }
+}
+class Java extends Student{
+
+    Java(String name, String course) {
+        super(name, course);
+    }
+    void getCourseInfo(){
+        System.out.println(name + " is learning the course of "+course);
+    }
+
+    public static void main(String[] args) {
+        Java j = new Java("Olena", "Java 8");
+        j.getCourseInfo();
+
+        Selenium s = new Selenium("Sharif", "Selenium 3");
+        s.getCourseInfo();
+
+
     }
 }

@@ -1,23 +1,17 @@
-package com.company.syntax.reviewclass09;
+package com.company.syntax.reviewclass10;
 
 public class Employee {
-    String name;
-    int age;
-    int empId;
-    double salary;
 
-    public Employee(String name, int age, int empId, double salary) {
-        this.name = name;
-        this.age = age;
-        this.empId = empId;
-        this.salary = salary;
+    Employee(){
+        System.out.println("This employee is not good");
     }
 
-    public void work(){
-        System.out.println("every employee work");
+    Employee(String name){
+        System.out.println(name+" is a good employee");
     }
 
-    public void earn(){
-        System.out.println("all employees earn");
+    public static void main(String[] args) {
+        new Employee();
+        new Employee("You");
     }
 }
