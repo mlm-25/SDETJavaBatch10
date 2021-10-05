@@ -1,12 +1,34 @@
-Constructors:
-    Is a special block of code that helps us build/initialize(give initial values to fields)
-    our objects. When we write new className(); the code inside the constructor is executed.
-    When we do not provide a constructor a default constructor is provided by compiler.
-    If we have multiple constructors' java will get the number of arguments and type of
-    arguments to decide which constructor to execute.
-    If we have the same number of parameters their data types are also same
-    we will get an error as now Java not decide which constructor to call.
-This()
-    this keyword when used with parenthesis calls the constructor of class which constructor to call
-    is decided based on the data type of arguments that we are passing.
-    It helps us reduce duplicate as n real life projects we might be writing a lots of constructors
+"this" keyword:
+We can use this keyword to differentiate between local and instance variables.
+class car{
+String make;
+String model;
+int year;
+Car(String make, String model, int year){
+this.make=make;
+this.model=model;
+this.year=year;
+}
+
+void int year=2021;
+String make ="Honda";
+String model="Civic";
+System.out.println;
+}
+"this()"
+we can use this() to refer to the contractors of the class
+if we have multiple constructors Java will decide based on the parameters
+to call
+this keyword to call the methods
+------------------------------------------------------------
+Inheritance:
+is a mechanism in Java through which we can access all the fields and methods from one class
+inside another class
+We use extends key word to inherit the properties and methods.
+benefits:
+we can ovoid code duplication
+it improves performance
+it reduces amount of memory to run the program
+Disadvantages:
+Parent child classes are tightly coupled if we make any changes we must update the child class
+as well otherwise code may break.

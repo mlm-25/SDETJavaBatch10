@@ -1,24 +1,8 @@
-package com.company.syntax.class19;
+package com.company.syntax.class21;
 
-public class Cat {
+public class Cat extends Pet{
 
-    String name;
-    int age;
-    double height;
-    double weight;
-
-    Cat(String name, int age,
-        double height, double weight){
-        this.name=name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-
-    }
-
-    void printInfo(){
-        String name = "Local var";
-        System.out.println("Name "+this.name+" Age "+age+
-                " Height "+height+" Weight "+weight);
+    void meow(){
+        System.out.println("I can do meow all day");
     }
 }

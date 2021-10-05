@@ -1,50 +1,22 @@
-package com.company.syntax.class19;
+package com.company.syntax.class21;
 
 public class Person {
-    String name;
+
+    private String name;
     int age;
-    double weight;
-    double height;
-    String education;
+    protected double height;
+    public double weight;
 
-    // windows: Ctrl+shift+/ to comment/uncomment
-
-    Person(){
-        System.out.println("Important lines of code that should always be"+
-                " executed when creating the object of this class");
-        name = "None";
-        age = 30;
-        weight = 50;
-        height = 5.5;
-        education = "None";
+    public void sleep(){
+        System.out.println("Person is sleeping");
     }
-
-    Person(String personName){
-        this(); // calls the no argument constructor must be on first line
-        System.out.println("First constructor");
-        name = personName;
+    protected void eat(){
+        System.out.println("Person is eating");
     }
-
-    Person(String personName, int personAge){
-        this(personName);
-        System.out.println("First constructor");
-        age = personAge;
+    private void walk(){
+        System.out.println("Person can walk");
     }
-
-    void printInfo(){
-        System.out.println("Name "+name+" Age "+age+" Weight "+weight+" Height "+height+" Education "+education);
-    }
-
-    Person(int personAge ,  String personName){
-        System.out.println("Second constructor");
-        name = personName;
-        age = personAge;
-        weight = 50;
-        height = 5.5;
-        education = "None";
-
-        System.out.println("Important lines of code that should always be"+
-                " executed when creating the object of this class");
-
+    public static void run(){
+        System.out.println("Person can run");
     }
 }

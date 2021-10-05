@@ -1,12 +1,9 @@
-package com.company.syntax.class18;
+package com.company.syntax.class21;
 
 public class CarTester {
 
     public static void main(String[] args) {
-
-        Car car1 = new Car("Civic", "Honda", 2022);
-        car1.printCarInfo();
-        Car car2 = new Car("Sportage", "Kia", 2022);
-        car2.printCarInfo();
+        Car car = new Car("Tesla", "S", 2020);
+        car.printInfo();
     }
 }

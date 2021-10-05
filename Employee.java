@@ -1,18 +1,13 @@
-package com.company.syntax.class20;
+package com.company.syntax.class21;
 
-public class Employee {
-    String name;
-    int age;
-    double height;
-    double weight;
-    double salary;
+public class Employee extends Person{
+
     String empId;
-    int experienceYears;
-
-
-
-    void eat(){
-        System.out.println("We can eat");
+    double salary;
+    void work(){
+        System.out.println("Employee "+empId+" having age "+age+" is working");
     }
-
+    void getPaid(){
+        System.out.println(empId+" is paid "+salary);
+    }
 }
