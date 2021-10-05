@@ -1,82 +1,52 @@
-package com.company.syntax.class25.polymorphismdemo;
+package com.company.syntax.class27.task;
 
-public class WebDriver {
-    void openBrowser(){
-        System.out.println("Opening browser");
+public interface WebDriver {
+    void openBrowser();
+    void closeBrowser();
+    void maximizeWindow();
+    void findElement();
+}
+class ChromeDriver implements WebDriver{
+
+    @Override
+    public void openBrowser() {
+        System.out.println("Open Google Chrome");
     }
-    void loadWebsite(){
-        System.out.println("load the website inside the browser");
+
+    @Override
+    public void closeBrowser() {
+        System.out.println("Close Google Chrome");
     }
-    void Test1(){
-        System.out.println("Enter login info and check if you can login");
+
+    @Override
+    public void maximizeWindow() {
+        System.out.println("Maximize the Google Chrome Window");
     }
-    void Test2(){
-        System.out.println("Click on buy button and make sure you can place order");
-    }
-    void TestFileDownload(){
-        System.out.println("Testing file download");
-    }
-    void closeBrowser(){
-        System.out.println("Close browser");
+
+    @Override
+    public void findElement() {
+        System.out.println("Find elements in Google Chrome");
     }
 }
-class GoogleChrome extends WebDriver{
-    void openBrowser(){
-        System.out.println("Opening browser Google Chrome");
+class FirefoxDriver implements WebDriver{
+
+    @Override
+    public void openBrowser() {
+        System.out.println("Open Firefox");
     }
-    void loadWebsite(){
-        System.out.println("load the website inside the browser Google Chrome");
+
+    @Override
+    public void closeBrowser() {
+        System.out.println("Close Firefox");
     }
-    void Test1(){
-        System.out.println("Enter login info and check if you can login Google Chrome");
+
+    @Override
+    public void maximizeWindow() {
+        System.out.println("Maximize the Firefox Window");
     }
-    void Test2(){
-        System.out.println("Click on buy button and make sure you can place order Google Chrome");
-    }
-    void TestFileDownload(){
-        System.out.println("Testing file download Google Chrome");
-    }
-    void closeBrowser(){
-        System.out.println("Close browser Google Chrome");
-    }
-}
-class FireFox extends WebDriver{
-    void openBrowser(){
-        System.out.println("Opening browser FireFox");
-    }
-    void loadWebsite(){
-        System.out.println("load the website inside the browser FireFox");
-    }
-    void Test1(){
-        System.out.println("Enter login info and check if you can login  FireFox");
-    }
-    void Test2(){
-        System.out.println("Click on buy button and make sure you can place order FireFox");
-    }
-    void TestFileDownload(){
-        System.out.println("Testing file download FireFox");
-    }
-    void closeBrowser(){
-        System.out.println("Close browser FireFox");
-    }
-}
-class Safari extends WebDriver{
-    void openBrowser(){
-        System.out.println("Opening browser Safari");
-    }
-    void loadWebsite(){
-        System.out.println("load the website inside the browser Safari");
-    }
-    void Test1(){
-        System.out.println("Enter login info and check if you can login Safari");
-    }
-    void Test2(){
-        System.out.println("Click on buy button and make sure you can place order Safari");
-    }
-    void TestFileDownload(){
-        System.out.println("Testing file download Safari");
-    }
-    void closeBrowser(){
-        System.out.println("Close browser Safari");
+
+    @Override
+    public void findElement() {
+        System.out.println("Find elements in Firefox");
     }
 }

@@ -1,17 +1,22 @@
-package com.company.syntax.class19;
-
-import java.util.Scanner;
+package com.company.syntax.class27.encapsilation;
 
 public class PersonTester {
-
     public static void main(String[] args) {
-        Person person1 = new Person(30, "Jamil");
+        Person person = new Person();
+        person.setName("Burju");
+        person.setAge(18);
+        person.setWeight(80);
+       /* person.name="Burju";
+        person.age=16;
+        person.weight=30;
+        person.height=5;*/
+        person.printInfo();
+
+        Person person1 = new Person();
+        /*person1.name="Mick King";
+        person1.age=120;
+        person1.height=2000;
+        person1.weight=-15;*/
         person1.printInfo();
-
-        Scanner scan = new Scanner(System.in);
-        Person person2 = new Person(scan.next(), scan.nextInt());
-        person2.printInfo();
-
-        StringBuilder  stringBuilder = new StringBuilder();
     }
 }

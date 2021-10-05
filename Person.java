@@ -1,42 +1,41 @@
-package com.company.syntax.class25.overridingdemo;
+package com.company.syntax.class27.encapsilation;
 
 public class Person {
-    String name;
-    public Person(String name) {
-        this.name = name;
-    }
+    private String name;
+    private int age;
+    private int weight;
+    private int height;
 
-    void eat(){
-        System.out.println("Person can eat");
+    public void setName(String name){
+        if(name.length()<15){
+            this.name = name;
+        }else{
+            System.out.println("Not allowed");
+        }
     }
-    void performDailActivities(){
-        System.out.println("Eat sleep repeat");
+    public void setAge(int age){
+        if(age>0 && age<120){
+            this.age = age;
+        }else{
+            System.out.println("Age out of range");
+        }
     }
-}
-class Employee extends Person{
-    public Employee(String name) {
-        super(name);
+    public  void setWeight(int weight){
+        if(weight>0 && weight<150){
+            this.weight = weight;
+        }else{
+            System.out.println("Weight is out of range");
+        }
     }
-
-    void performDailActivities(){
-        System.out.println("Office work all the day and emails at night");
+    String getName(){
+        return name;
     }
-}
-class Student extends Person{
-    public Student(String name) {
-        super(name);
-    }
-
-    void performDailActivities(){
-        System.out.println("Attend classes at night");
-    }
-}
-class Teacher extends Person{
-    public Teacher(String name) {
-        super(name);
-    }
-
-    void performDailActivities(){
-        System.out.println("Teaching classes checking assignments");
+    void printInfo(){
+        if(age == 0){
+            System.out.println("Something is wrong");
+        }else{
+            System.out.println("Name "+name+" Age "+age+" Weight "+weight
+                    +" Height "+height);
+        }
     }
 }
