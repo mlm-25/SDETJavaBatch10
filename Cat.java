@@ -1,16 +1,24 @@
-package com.company.syntax.class16;
+package com.company.syntax.class19;
 
 public class Cat {
 
-    static int noOfLegs = 4;
     String name;
+    int age;
+    double height;
+    double weight;
 
-    static void  display(){
-        System.out.println(noOfLegs);
-        //System.out.println(name);
+    Cat(String name, int age,
+        double height, double weight){
+        this.name=name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+
     }
 
-    void display2(){
-        System.out.println(noOfLegs);
+    void printInfo(){
+        String name = "Local var";
+        System.out.println("Name "+this.name+" Age "+age+
+                " Height "+height+" Weight "+weight);
     }
 }

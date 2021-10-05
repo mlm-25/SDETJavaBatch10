@@ -1,13 +1,10 @@
-package com.company.syntax.class16;
+package com.company.syntax.class19;
 
 public class CatTester {
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat();
-        cat1.name="Mano";
-        Cat cat2 = new Cat();
-        cat2.name="Billi";
+        Cat cat = new Cat("Tommy", 10, 3, 10);
+        cat.printInfo();
 
-        Cat.display();
     }
 }

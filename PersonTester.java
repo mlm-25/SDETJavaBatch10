@@ -1,17 +1,17 @@
-package com.company.syntax.class18;
+package com.company.syntax.class19;
+
+import java.util.Scanner;
 
 public class PersonTester {
 
     public static void main(String[] args) {
-        Person person = new Person("Jesus",25,"USA");
-     /*   person.name="Jesus";
-        person.age=25;
-        person.country="USA";*/
-        person.printInfo();
-        Person person1 = new Person("Somi",18,"USA");
-      /*  person1.name="Somi";
-        person1.country="USA";*/
+        Person person1 = new Person(30, "Jamil");
         person1.printInfo();
 
+        Scanner scan = new Scanner(System.in);
+        Person person2 = new Person(scan.next(), scan.nextInt());
+        person2.printInfo();
+
+        StringBuilder  stringBuilder = new StringBuilder();
     }
 }
