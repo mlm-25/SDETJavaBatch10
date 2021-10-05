@@ -1,30 +1,21 @@
-package com.company.syntax.class26.abstaction;
+package com.syntax.class13;
 
-public abstract class Phone {
-    public void makePhoneCall(){
-        System.out.println("Calling");
-    }
-    public void sendSMS(){
-        System.out.println("Sending a message");
-    }
-    public abstract void takePictures();
-    public abstract void unlock();
-}
-class Iphone extends Phone implements CallAble{
-    public void method(){}
-    @Override
-    public void takePictures(){
-        System.out.println("Take pictures with 12Mega pixel camera");
-    }
-    public void unlock(){
-        System.out.println("unlocks with face id");
-    }
-}
-class Samsung extends Phone{
-    public void takePictures(){
-        System.out.println("Take pictures with 108 Mega pixel camera");
-    }
-    public void unlock(){
-        System.out.println("unlock using fingerprint");
-    }
+public class Phone {
+
+	String make;
+	String model;
+	int RAM;
+	int ROM;
+	int camera;
+	boolean is5G;
+	double screenSize;
+
+	void makeCall() {
+		System.out.println(make + " " + model + " can make calls");
+	}
+
+	void takePictures() {
+		System.out.println(make + " " + model + " can take pictures");
+	}
+
 }

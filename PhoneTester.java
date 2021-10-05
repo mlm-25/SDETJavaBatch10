@@ -1,18 +1,19 @@
-package com.company.syntax.class26.abstaction;
+package com.syntax.class13;
 
 public class PhoneTester {
-    public static void main(String[] args) {
-        //Phone phone = new Phone(); CE not possible to create object directly
 
-        Phone phone = new Iphone();
-        phone.makePhoneCall();
-        phone.sendSMS();
-        phone.takePictures();
-        phone.unlock();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-        CallAble callAble = new Iphone();
+		Phone iphone = new Phone();
+		iphone.camera = 12;
+		iphone.make = "Apple";
+		iphone.model = "iPhone 12";
+		iphone.is5G = true;
+		iphone.screenSize = 6.7;
+		iphone.makeCall();
+		iphone.takePictures();
 
+	}
 
-
-    }
 }

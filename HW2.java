@@ -1,14 +1,14 @@
-package com.company.syntax.class17;
+package com.syntax.class13;
 
 public class HW2 {
-
-    public String reverse(String str){
-
-        StringBuilder str2 = new StringBuilder(str);
-        str2.reverse();
-        return str2.toString();
-
-
-    }
+	
+	String number (int num) {
+		
+		if(num%2==0) {
+			return num+" is an even number";
+		}else {
+			return num+" is an odd number";
+		}
+	}
 
 }

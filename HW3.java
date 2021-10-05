@@ -1,30 +1,32 @@
-package com.company.syntax.class18;
+package com.syntax.class13;
 
 public class HW3 {
 
-    private HW3(){
+	String palindrome(char a, char b, char c, char d, char e) {
+		String String = null;
 
-    }
+		char[] array = new char[5];
+		array[0] = a;
+		array[1] = b;
+		array[2] = c;
+		array[3] = d;
+		array[4] = e;
 
-    HW3(String name){
+		for (int i = 0; i < array.length; i++) {
 
-    }
+			if (a == e && b == d) {
 
-    protected HW3(int age){
+				return "Palindrome";
 
-    }
+			} else if (!(a == e) || !(b == d)) {
 
-    public HW3(boolean isRaining){
+				return "Not Palindrome";
+			}
+			return null;
 
-    }
+		}
+		return String;
 
-    public static void main(String[] args) {
-        HW3 task1 = new HW3();
-        HW3 task2 = new HW3("balabla");
-        HW3 task3 = new HW3(15);
-        HW3 task4 = new HW3(false);
-
-    }
-
+	}
 
 }

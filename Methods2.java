@@ -1,6 +1,6 @@
 package com.syntax.class13;
 
-public class HW1 {
+public class Methods2 {
 
 	double getMax(double num1, double num2) {
 
@@ -10,5 +10,4 @@ public class HW1 {
 			return num2;
 		}
 	}
-
 }

@@ -1,12 +1,14 @@
 package com.syntax.class13;
 
-public class HW1Tester {
+public class Methods3Tester {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		HW1 hw = new HW1();
-		System.out.println(hw.getMax(20, 120));
+		Methods3 method = new Methods3();
+		method.method5("Toto");
+
+		System.out.println();
 
 	}
 

@@ -1,43 +1,19 @@
-package com.company.syntax.reviewclass10;
+package com.syntax.class13;
 
 public class Student {
-    String name;
-    String course;
 
-    Student(String name, String course){
-        this.name = name;
-        this.course = course;
-    }
+	String name;
+	String id;
+	char gender;
+	double tuition;
+	String school;
 
-    void getCourseInfo(){
-        System.out.println(name + " is learning "+ course);
-    }
-}
-class Selenium extends Student{
-    Selenium(String name, String course){
-        super(name, course);
-    }
+	void study() {
+		System.out.println(name + " studies in " + school);
+	}
 
-    void getCourseInfo(){
-        System.out.println(name + " is learning the course of "+course);
-    }
-}
-class Java extends Student{
+	void payTuition() {
+		System.out.println(name + " pay " + tuition);
+	}
 
-    Java(String name, String course) {
-        super(name, course);
-    }
-    void getCourseInfo(){
-        System.out.println(name + " is learning the course of "+course);
-    }
-
-    public static void main(String[] args) {
-        Java j = new Java("Olena", "Java 8");
-        j.getCourseInfo();
-
-        Selenium s = new Selenium("Sharif", "Selenium 3");
-        s.getCourseInfo();
-
-
-    }
 }

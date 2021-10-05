@@ -1,22 +1,25 @@
-package com.company.syntax.reviewclass07;
+package com.syntax.class13;
 
 public class StudentTester {
 
-    public static void main(String[] args) {
-        Student s1 = new Student();
-        s1.name = "Sharif";
-        s1.course = "Java";
-        s1.displayTheFees();
-        System.out.println(Student.salary);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-        Student s2 = new Student();
-        s2.name = "Andrei";
-        s2.course = "Selenium";
-        s2.displayTheFees();
+		Student Michael = new Student();
+		Michael.name = "Michael";
+		Michael.id = "123";
+		Michael.gender = 'M';
+		Michael.school = "Syntax";
+		Michael.tuition = 1000;
+		Michael.study();
+		Michael.payTuition();
 
-        Student s3 = new Student();
-        s3.name = "Enes";
-        s3.course = "API";
-        s3.displayTheFees();
-    }
+		Student Anne = new Student();
+		Anne.name = "Anne Mary";
+		Anne.school = "Syntax";
+		Anne.tuition = 1000;
+		Anne.study();
+		Anne.payTuition();
+
+	}
 }
