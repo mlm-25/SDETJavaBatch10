@@ -1,84 +1,41 @@
-package com.company.syntax.class27.demo1;
+package com.company.syntax.reviewclass11;
 
 public abstract class Vehicle {
+    //definition
 
-    String vinNumber;
-    static int totalNumberOfVehicle;
+    public void getSpeed(){
+        System.out.println("Getting speed of the vehicle");
+    }
 
-    Vehicle(String vinNumber) {
-        this.vinNumber = vinNumber;
-        totalNumberOfVehicle++;
-        System.out.println("Vehicle constructor");
+    public void measureAverage(){
+        System.out.println("Calculating average");
     }
-    Vehicle() {
-        this.vinNumber = vinNumber;
-    }
-    static void displayTotalVehicle(){
-        System.out.println("We build "+totalNumberOfVehicle+" Vehicle");
-    }
-    public void drive(){
-        System.out.println("we can drive Vehicle");
-    }
-    protected void stop(){
-        System.out.println("Vehicle can stop");
-    }
-    public abstract void start();
-    abstract void speed();
-    //public static abstract void gps(); not allowed
-    //private abstract void gps(); // not allowed because private methods can not be inherited
-    //final abstract void gps(); not allowed
+
+    public abstract void color();
+
+    public abstract void getPrice();
 }
-abstract class Car extends Vehicle{
+class Honda extends Vehicle{
 
-    String carType;
-    Car(String carType, String vinNumber){
-        super(vinNumber);
-        this.carType = carType;
-        System.out.println("Car constructor");
-    }
     @Override
-    public void speed(){
-        System.out.println("Max speed is 400");
+    public void color(){
+        System.out.println("Honda color is black");
     }
-    public abstract void breaking();
 
+    @Override
+    public void getPrice(){
+        System.out.println("It is costly");
+    }
 }
-class BMW extends Car{
+class Audi extends Vehicle{
 
-    String make;
-    String model;
-    BMW(String make, String model, String vinNumber, String carType){
-        super(carType, vinNumber);
-        System.out.println("BMW constructor");
-    }
-    public void start(){
-        System.out.println("BMW can start remotely");
+    @Override
+    public void color() {
+        System.out.println("Forget color focus on price");
     }
 
-    public void breaking(){
-        System.out.println("BMW can break");
-    }
-    public void displayInfo(){
-        System.out.println("We build "+make+" "+model+" with car type "+carType+" and vin number "+vinNumber);
-    }
-
-}
-class Toyota extends Car{
-    String make;
-    String model;
-
-     Toyota(String make, String model, String carType, String vinNumber) {
-        super(carType, vinNumber);
-        this.make = make;
-        this.model = model;
-    }
-    public void start(){
-        System.out.println("Toyota can start remotely");
-    }
-    public void breaking(){
-        System.out.println("Toyota can break");
-    }
-    public void displayInfo(){
-        System.out.println("We build "+make+" "+model+" with car type "+carType+" and vin number "+vinNumber);
+    @Override
+    public void getPrice() {
+        System.out.println("Not affordable");
     }
 }

@@ -1,18 +1,12 @@
-package com.company.syntax.class26.abstaction;
+package com.company.syntax.reviewclass11;
 
 public class FileTester {
+
     public static void main(String[] args) {
+        File f1 = new PDFFile();
+        f1.open();
+        f1.close();
+        f1.edit();
 
-        /*File file = new PdfFile();
-        file.open();
-        file.edit();
-        file.close();*/
-
-        File[] file = {new JavaFile(), new WordFile(), new PdfFile()};
-        for (File value:file) {
-            value.open();
-            value.edit();
-            value.close();
-        }
     }
 }

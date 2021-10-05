@@ -1,51 +1,15 @@
-Access Modifiers in Java:
-Access modifiers are keywords that determine the access of the
-method/field/constructor and class for now but later on you guys
-will learn about interfaces and some concepts they are also
-applicable their to thees concepts.
-Below are the keywords in java to control the access of members of a class:
-private
-default
-protected
-public
+Abstraction -
+it is the process of hiding the implemented details and focus on the
+functionality
 
-1) private:
-    We can only access that member inside that specific class
+it helps us to divide the workflow in multiple chile classes, and also it
+helps us to reduce the complexity of the code
 
-Note:
-    1) we cannot have two public classes inside a .java file
-    2) there should be public class with same name as of your file otherwise you will get
-    an error
-    3) we can have many classes inside a .java file but only on class can have public
-    access modifier
------------------------------------------------------------------------------------------
-Private:
-    means all members having this access modifiers can be accessed inside that same class
-    only.
-Default:
-    it is not a keyword default access modifier is automatically applicable when we don't mention
-    any access modifier all the members which have this access modifier are visible inside
-    the same class and same package.
-Protected:
-    Means all the members of a class are accessible within same class and package but if we need
-    to access them outside the package we need to extend from that class but to access something
-    that means need an object we still can't access it.
-Public:
-    Means all the members are accessible throughout the project.
-    ------------------------------------------------------------------------------------------
-Constructors:
-    Constructors are special blocks of code executed when we create the object of a class
-    by writing new keyword and name of class with parenthesis.
-    We mainly use constructor to initialize the fields of an object, but we can also put some
-    code that we want to execute everytime someone is creating the object of that class.
-Rules:
-    1) No return type not even void.
-    2) Same name as class name.
-    3) We can have constructors with and without parameters
-    4) Constructors don't participate in inheritance
-    5) Constructors are automatically called when you create the object
-    6) We can overload constructors
-    7) We can not use non access modifiers like static with constructors
-    8) We can not override a constructor because they don't participate in inheritance
-    9) If we are not creating a constructor java creates a default zero argument constructor
-    automatically
+rules for abstraction:
+to define the abstract class, we have to use abstract keyword
+we can have abstract classes with or without abstract methods
+we cannot create the object of abstract class, but we can create the object of
+its derived class
+we can have public private protected members in abstract class
+we cannot have a method as static and abstract in abstract class
+we cannot have a method as a private and abstract
