@@ -1,40 +1,37 @@
-Method overriding:
-    Method is overriding is a mechanism in java through which child classes can provide
-    their own behaviors with same method can name in parent class.
+Casting in non primitives:
+As we can convert primitive data types with get the help of casting we can do the same
+with non primitives.
+Rules:
+Parent classes are considered big data types in non primitives
+we can store the object of a child class in a variable of type Parent.
 
-Rules for overriding:
-    1) There should be at least two classes with parent child relationship.
-    2) Method in child class must have same return type.
-    3) Name of method with parameters(signature of method) should be same
-    4) Those members of the class which do not participate in inheritance can
-    not be overridden  for example 1) Constructors 2) private methods
-    5) The access level of the method or property can not be more restrictive
-    for example if method in parent class has public access modifier we can not change
-    it to protected or default or private, but we can not do the reverse.
-    6) We can't override a static method, but we can redeclare that method in the child
-    class it's just a different name the mechanism is same as non-static methods
-    7) It's also called dynamic polymorphism/late binding
-    8) We can use @Override to test our overriding method is correct or not.
+class Parent{
+String name;
+void printName(){
+}
+}
+class Child extends Parent{
 
-Overloading                     vs                  Overriding
-Method return type does not matter ================= Method return type matters
-Method signature should be different ================ Method signature should be same
-Access modifiers don't matter ======================= Access modifiers matter
-Inheritance is not needed =========================== Need inheritance relationship
-We can overload a constructor ======================= Constructors can private methods can't be overridden private method
-we can overload static method
------------------------------------------------------------------------------------------------
-We can store a child class object inside a parent class type variable,
-but we will only be able to call those methods which are present in parent class
-if we want to call the methods from child class we must first convert parent type
-variable to Child type by using below syntax
- (Child type) parentVar will convert it to child type now we can call the specific methods
- from child as well
-with the help of this casting we can create an array that can hold all the objects of
-all the child classes of parent and because of overriding all the methods have dame name
-now we can execute all the methods from all the child classes with the help of an array
-without writing all the code manually
------------------------------------------------------------------------------------------------
-Final:
-in java means something is complete and don't need modifications.
-if we use final keyword with a variable we can't change the value of that variable
+void myOwnMethod(){
+}
+}
+
+Parent parent = new Child();
+parent.myOwnMethod() //CE error
+we can do above assignment, but we can't do the reverse
+Child child = new Parent(); // CE error
+Benefits of casting:
+we can achieve run time polymorphism using casting and method overriding
+we can store the objects of all the child classes in arrays or some other data structures
+we can write dynamic code to access all those objects and execute the same methods on different objects.
+when we store a child class object in a parent type variable we can't call child class specific methods
+if we want to call child class methods we can do so, but we have to cast that object first.
+It's called run-time polymorphism/late binding.
+Final Keyword:
+1) final with variables if we use final keyword with variables we can't change their values
+2) if we use final with methods we can not override that method in child class
+3) if we use final with a class we can not inherit from that class
+
+----------------------------------------------------------------------------------------
+Abstraction
+is a process of hiding implementation details and only showing the functionality.
